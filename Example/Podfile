@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'YGMonitorKit_Example' do
+  pod 'YGMonitorKit', :path => '../'
+
+  target 'YGMonitorKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

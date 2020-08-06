@@ -7,6 +7,7 @@
 //
 
 #import "YGViewController.h"
+#import <YGMonitor.h>
 
 @interface YGViewController ()
 
@@ -17,8 +18,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    
+    YGMonitor *monitor = [YGMonitor shareInstance];
+    [monitor startMainTheardMonitor];
+    [monitor startMemoryMonitor];
+    [monitor startCPUMonitor];
+    [monitor startFPSMonitoring];
+    
+
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

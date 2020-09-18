@@ -1,0 +1,16 @@
+PODS:
+  - YGMonitorKit (0.1.0)
+
+DEPENDENCIES:
+  - YGMonitorKit (from `../`)
+
+EXTERNAL SOURCES:
+  YGMonitorKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  YGMonitorKit: c82897003644d8aff5cc2b788dcaba2a50e2601a
+
+PODFILE CHECKSUM: d3b2656043fd79a8300496615fea721d78a25d4c
+
+COCOAPODS: 1.8.4

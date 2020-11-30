@@ -1,0 +1,6 @@
+framework module YGMonitorKit {
+  umbrella header "YGMonitorKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

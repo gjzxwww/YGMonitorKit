@@ -201,12 +201,8 @@
         return;
     }
     
-
     CFRunLoopObserverContext context = {0,(__bridge void*)self,NULL,NULL,NULL};
-    
-   
     RLObserver = CFRunLoopObserverCreate(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, &mObservercallBack, &context);
-    
     //向主线程添加 观察者
     CFRunLoopRef mainLoop = CFRunLoopGetMain();
     CFRunLoopAddObserver(mainLoop, RLObserver, kCFRunLoopCommonModes);
@@ -223,8 +219,8 @@
         while (YES)
         {
             
-             //超时时间设置0.06秒
-                dispatch_time_t outTimer = dispatch_time(DISPATCH_TIME_NOW, 0.06 * NSEC_PER_SEC);
+             //超时时间设置600毫秒
+                dispatch_time_t outTimer = dispatch_time(DISPATCH_TIME_NOW, 0.6 * NSEC_PER_SEC);
             
             //信号量>1或者超时会继续向下进行，否则等待（dispatch_semaphore_wait执行后信号量会-1）
             long semaphoreWait = dispatch_semaphore_wait(self->semaphore, outTimer);

@@ -1,0 +1,6 @@
+framework module Pods_YGMonitorKit_Tests {
+  umbrella header "Pods-YGMonitorKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
